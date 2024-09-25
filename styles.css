@@ -1,0 +1,306 @@
+
+body{
+    background-image: url(./images/pexels-jplenio-1103970.jpg);
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0 auto;    
+}
+
+header{
+    width: 100%;
+    height: 5vh;
+    padding: 10px;
+    background-color:rgb(95, 91, 99);
+    border-radius: 5px;
+}
+
+.navbar{
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+.navbar a{
+    text-decoration: none;
+    background-color: rgb(34, 178, 89);
+    color: blue;
+    padding: 5px 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 35px;
+}
+
+a:visited{
+    color: purple;
+}
+a:hover{
+    color: red;
+    text-decoration: underline;   
+}
+a:active{
+    color: orange;
+}
+
+main{
+    padding: auto;
+    margin: auto;
+}
+
+#about{
+    width: 100%;
+    height: 60vh;
+    background-color: #a3b8e2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.about-me{
+     width: 38%;
+     float: left;
+     margin-left: 35px;
+ }
+
+ .skills{
+     width: 52%;
+     float: right;
+     margin-left: 10px;
+
+ }
+
+.about-me h2{
+    color: darkblue;
+}
+
+.about-me img{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px; 
+    margin-left: 50px;      
+}
+
+.profile-name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgba(0, 0, 0, 0.7);
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+
+.about-me h4{
+    font-family: Georgia,'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.about-me p{
+    margin-left: 50px;
+    text-decoration: solid;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 5px;
+}
+.skills h2{
+    color: darkblue;
+}
+
+.skills ul{
+    text-decoration: solid;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+}
+
+.skills li{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#projects{
+    width: 100%;
+    height: 60vh;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 20px; 
+}
+
+#projects h2{
+    margin-left: 35px;
+    color: darkblue;
+    margin-top: 20px;
+
+}
+.container{
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.box{
+    float: left;
+    width: 30%;
+    height: 250px;
+    border: 3px solid rgb(235, 233, 240);
+    margin: 1%;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.box img{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.box p{
+    font-size:x-small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Clear floats after the divs */
+.container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#experience{
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#exp{
+    margin-left: 35px;
+    color: darkblue;
+    margin-bottom: 5px;
+    
+}
+
+.jobexperience{
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+
+.job1{
+    width: 48%;
+    float: left;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+.job1 h3{
+    color:rgba(0, 0, 0, 0.4);
+}
+
+.job1 ul{
+    list-style-type: none;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.job1 li{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.job2{
+    width: 48%;
+    float: left;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.job2 h3{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.job2 ul{
+    list-style-type: none;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.job2 li{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#education{
+    width: 100%;
+    height: 30vh;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(225, 225, 225, 0.4);
+}
+.education-content h2{
+    color: darkblue;
+}
+
+.education{
+    width: 48%;
+    float: left;
+    margin-left: 35px;
+}
+
+.education ul{
+    list-style-type: none;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+}
+
+.education li{
+    margin: 5px 0;
+    padding: 5px;
+}
+.certification{
+    width: 48%;
+    float: left;
+}
+
+.certification ul{
+    list-style-type: none;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: -10px;
+}
+
+.certification li{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#blog{
+    width: 100%;
+    height: 25vh;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:rgb(255, 228, 196, 0.2);
+}
+
+#blog h2{
+    margin-left: 35px;
+}
+
+#blog p{
+    margin-left: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #a3b8e2;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 0 100px;
+}

@@ -1,306 +1,257 @@
-
-body{
-    background-image: url(./images/pexels-jplenio-1103970.jpg);
-    font-family: Arial, sans-serif;
-    width: 100%;
-    margin: 0 auto;    
+:root {
+  --main-bg-color: rgb(253, 253, 255);
+  --primary-color: #1f3a93;
+  --accent-color: #f5b041;
+  --header-bg: rgb(95, 91, 99);
+  --footer-bg: #a3b8e2;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
 }
 
-header{
-    width: 100%;
-    height: 5vh;
-    padding: 10px;
-    background-color:rgb(95, 91, 99);
-    border-radius: 5px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "about about about about about about about about about about about about"
+    "projects projects projects projects projects projects projects projects projects projects projects projects"
+    "experience experience experience experience experience experience experience experience experience experience experience experience"
+    "education education education education education education education education education education education education"
+    "blog blog blog blog blog blog blog blog blog blog blog blog"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  gap: 20px;
+  padding: 20px;
 }
 
-.navbar{
-    text-align: center;
-    padding: 5px;
-    margin: auto;
-}
-.navbar a{
-    text-decoration: none;
-    background-color: rgb(34, 178, 89);
-    color: blue;
-    padding: 5px 25px;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin: 35px;
+header {
+  grid-area: header;
+  background-color: var(--header-bg);
+  padding: 10px;
 }
 
-a:visited{
-    color: purple;
-}
-a:hover{
-    color: red;
-    text-decoration: underline;   
-}
-a:active{
-    color: orange;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px;
 }
 
-main{
-    padding: auto;
-    margin: auto;
+.navbar a {
+  text-decoration: none;
+  background-color: rgb(34, 178, 89);
+  color: blue;
+  padding: 5px 25px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 10px;
 }
 
-#about{
-    width: 100%;
-    height: 60vh;
-    background-color: #a3b8e2;
-    border-radius: 5px;
-    padding: 5px;
+.navbar a:hover {
+  color: red;
+  text-decoration: underline;
 }
 
-.about-me{
-     width: 38%;
-     float: left;
-     margin-left: 35px;
- }
-
- .skills{
-     width: 52%;
-     float: right;
-     margin-left: 10px;
-
- }
-
-.about-me h2{
-    color: darkblue;
+#about {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #a3b8e2;
+  padding: 20px;
+  border-radius: 5px;
+}
+.about-me,
+.skills {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.about-me img{
-    width: 120px;
-    height: 120px;
-    border-radius: 5px; 
-    margin-left: 50px;      
+.about-me h2,
+.skills h2 {
+  color: darkblue;
 }
 
-.profile-name{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color:rgba(0, 0, 0, 0.7);
-    margin-left: 50px;
-    margin-bottom: 5px;
+.about-me img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: 0 4px 10px rgba(225, 225, 225, 0.1);
+}
+.about-details {
+  overflow: hidden;
+  margin-left: 150px;
 }
 
-.about-me h4{
-    font-family: Georgia,'Times New Roman', Times, serif;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-}
-.about-me p{
-    margin-left: 50px;
-    text-decoration: solid;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 5px;
-}
-.skills h2{
-    color: darkblue;
+.profile-name {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.5rem;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  margin: 0;
 }
 
-.skills ul{
-    text-decoration: solid;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    list-style-type: none;
+.profile-title {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(102, 102, 102);
+  margin-top: 5px;
+  font-weight: normal;
 }
 
-.skills li{
-    margin: 5px 0;
-    padding: 5px;
+p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.skills-list {
+  list-style: none;
+}
+.skills-list li {
+  margin-bottom: 15px;
 }
 
-#projects{
-    width: 100%;
-    height: 60vh;
-    background-color: lightgrey;
-    border-radius: 5px;
-    padding: 5px;
-    padding-bottom: 20px; 
+#projects {
+  grid-area: projects;
+  background-color: lightgrey;
+  padding: 20px;
+  border-radius: 5px;
+}
+#projects h2 {
+  color: darkblue;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-#projects h2{
-    margin-left: 35px;
-    color: darkblue;
-    margin-top: 20px;
-
-}
-.container{
-    padding: 5px;
-    box-sizing: border-box;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+.box {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border: 3px solid rgb(235, 233, 240);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
-.box{
-    float: left;
-    width: 30%;
-    height: 250px;
-    border: 3px solid rgb(235, 233, 240);
-    margin: 1%;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.box img {
+  width: 50%;
+  margin-top: 10px;
 }
 
-.box img{
-    width: 50%;
-    margin-top: 10px;
+#experience {
+  grid-area: experience;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.box p{
-    font-size:x-small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+#experience h2,
+h3 {
+  color: darkblue;
 }
-/* Clear floats after the divs */
-.container::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#experience{
-    width: 100%;
-    height: 50vh;
-    padding: 10px;
-    border-radius: 5px;
+.jobexperience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-#exp{
-    margin-left: 35px;
-    color: darkblue;
-    margin-bottom: 5px;
-    
+.jobexperience ul {
+  list-style: none;
+}
+.jobexperience ul li {
+  margin-bottom: 15px;
+}
+.job1,
+.job2 {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.jobexperience{
-    padding: 5px;
-    box-sizing: border-box;
-    margin-left: 50px;
+#education {
+  grid-area: education;
+  background-color: rgba(225, 225, 225, 0.4);
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.job1{
-    width: 48%;
-    float: left;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.education-content h2 {
+  color: darkblue;
+}
+.education-content ul {
+  list-style: none;
+}
+.education-content ul li {
+  margin-bottom: 15px;
 }
 
-.job1 h3{
-    color:rgba(0, 0, 0, 0.4);
+#blog {
+  grid-area: blog;
+  background-color: rgb(255, 228, 196, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+#blog h2 {
+  color: darkblue;
+}
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--footer-bg);
 }
 
-.job1 ul{
-    list-style-type: none;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+footer img {
+  display: inline-block;
+  width: 30px;
+  margin: 0 20px;
 }
 
-.job1 li{
-    margin: 5px 0;
-    padding: 5px;
-}
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "about"
+      "projects"
+      "experience"
+      "education"
+      "blog"
+      "footer";
+  }
 
-.job2{
-    width: 48%;
-    float: left;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+  .container {
+    grid-template-columns: 1fr;
+  }
 
-.job2 h3{
-    color: rgba(0, 0, 0, 0.4);
-}
+  .jobexperience {
+    grid-template-columns: 1fr;
+  }
 
-.job2 ul{
-    list-style-type: none;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.job2 li{
-    margin: 5px 0;
-    padding: 5px;
-}
-
-#education{
-    width: 100%;
-    height: 30vh;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(225, 225, 225, 0.4);
-}
-.education-content h2{
-    color: darkblue;
-}
-
-.education{
-    width: 48%;
-    float: left;
-    margin-left: 35px;
-}
-
-.education ul{
-    list-style-type: none;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 10px;
-}
-
-.education li{
-    margin: 5px 0;
-    padding: 5px;
-}
-.certification{
-    width: 48%;
-    float: left;
-}
-
-.certification ul{
-    list-style-type: none;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: -10px;
-}
-
-.certification li{
-    margin: 5px 0;
-    padding: 5px;
-}
-
-#blog{
-    width: 100%;
-    height: 25vh;
-    padding: 10px;
-    border-radius: 5px;
-    background-color:rgb(255, 228, 196, 0.2);
-}
-
-#blog h2{
-    margin-left: 35px;
-}
-
-#blog p{
-    margin-left: 70px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
-}
-
-footer{
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background-color: #a3b8e2;
-}
-
-footer img{
-    width: 30px;
-    height: 30px;
-    margin: 0 100px;
+  .education-content {
+    grid-template-columns: 1fr;
+  }
 }
